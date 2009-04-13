@@ -1,0 +1,23 @@
+# Do NOT forget to...
+#
+# Link the file to the right place:
+#
+#     sudo ln -s /home/kuotz/www/current/config/logrotate kuotz
+#
+# Syntax check:
+#
+#     sudo logrotate -d /etc/logrotate.d/kuotz
+#
+# Force the first rotate:
+#
+#     sudo logrotate -f /etc/logrotate.d/kuotz
+
+/home/kuotz/www/shared/log/*.log {
+  size 10M
+  missingok
+  rotate 7
+  compress
+  delaycompress
+  notifempty
+  copytruncate
+}

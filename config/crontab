@@ -1,0 +1,2 @@
+# m h  dom mon dow   command
+@hourly /home/kuotz/www/current/script/runner -e production  /home/kuotz/www/current/bin/cron.rb 
